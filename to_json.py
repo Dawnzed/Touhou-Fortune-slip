@@ -11,14 +11,14 @@ with open('东方签文（时间序）.txt', 'r',encoding="UTF-8") as file:
                 sign=""
                 while 1:
                     i+=1
-                    if lines[i]!="\n" and lines[i][0:2]!="by\n":
+                    if lines[i]!="\n" and lines[i][0:2]!="by":
                         content.append(lines[i][0:-1])
-                    if lines[i][0:2]!="by":
+                    print(lines[i][0:2])
+                    if lines[i][0:2]=="by":
                         sign=lines[i][0:-1]
                     if lines[i]=="\n":
                         break
-                slips.append({"id":id,"content":content,"sign":""})
-                print({"id":id,"content":content,"sign":""})
+                slips.append({"id":id,"content":content,"sign":sign})
             i+=1
         except:
             break
