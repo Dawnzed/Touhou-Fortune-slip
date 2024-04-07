@@ -23,5 +23,5 @@ with open('东方签文（时间序）.txt', 'r',encoding="UTF-8") as file:
         except:
             break
 j=json.dumps({"slips":slips},ensure_ascii=False,indent=4)
-with open('./Touou_Fourtune_Slips.json', 'w',encoding="UTF-8") as f:
+with open('./Touhou_Fourtune_Slips.json', 'w',encoding="UTF-8") as f:
     f.write(j)
