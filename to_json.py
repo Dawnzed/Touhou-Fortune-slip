@@ -21,6 +21,7 @@ with open('东方签文（时间序）.txt', 'r',encoding="UTF-8") as file:
                 slips.append({"id":id,"content":content,"sign":sign})
             i+=1
         except:
+            slips.append({"id":id,"content":content,"sign":sign})
             break
 j=json.dumps({"slips":slips},ensure_ascii=False,indent=4)
 with open('./Touhou_Fourtune_Slips.json', 'w',encoding="UTF-8") as f:
