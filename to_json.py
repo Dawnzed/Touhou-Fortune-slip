@@ -22,6 +22,6 @@ with open('东方签文（时间序）.txt', 'r',encoding="UTF-8") as file:
         except:
             slips.append({"id":id,"content":content,"sign":sign})
             break
-j=json.dumps({"slips":slips,"repo": "https://github.com/Dawnzed/Touhou-Fortune-slip",},ensure_ascii=False,indent=4)
+j=json.dumps({"slips":slips,"repo": "https://github.com/Dawnzed/Touhou-Fortune-slip","source":"https://raw.githubusercontent.com/Dawnzed/Touhou-Fortune-slip/main/Touhou_Fourtune_Slips.json"},ensure_ascii=False,indent=4)
 with open('./Touhou_Fourtune_Slips.json', 'w',encoding="UTF-8") as f:
     f.write(j)
