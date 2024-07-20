@@ -35,7 +35,7 @@ def txtToJson(filename:str):
             item["id"]="0"+item["id"]
         slips = slips + slips_main
     j=json.dumps({"slips":slips},ensure_ascii=False,indent=4)
-    with open('./Touhou_Fortune_Slips'+filename[5:-4]+'.json', 'w',encoding="UTF-8") as f:
+    with open('./Touhou_Fortune_Slips'+filename[4:-4]+'.json', 'w',encoding="UTF-8") as f:
         f.write(j)
 
 
