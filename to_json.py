@@ -25,7 +25,8 @@ def txtToJson(filename:str):
                     id+=1
                 i+=1
             except:
-                slips.append({"id":str(id),"content":content,"sign":sign})
+                if slips[-1].get("content") != content:
+                    slips.append({"id":str(id),"content":content,"sign":sign})
                 break
     if filename == "东方签文.txt":
         global slips_main
